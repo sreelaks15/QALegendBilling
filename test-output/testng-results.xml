@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-09-06T16:38:44 IST" name="Default suite" finished-at="2023-09-06T16:39:08 IST" duration-ms="24516">
+    <groups>
+      <group name="Regression">
+        <method signature="NewlyAddedLoginTest.TC_010_verifyLoginUsingNewlyAddedUser()[pri:1, instance:com.QALegendBilling.testscript.NewlyAddedLoginTest@7161d8d1]" name="TC_010_verifyLoginUsingNewlyAddedUser" class="com.QALegendBilling.testscript.NewlyAddedLoginTest"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test started-at="2023-09-06T16:38:44 IST" name="Default test" finished-at="2023-09-06T16:39:08 IST" duration-ms="24516">
+      <class name="com.QALegendBilling.testscript.NewlyAddedLoginTest">
+        <test-method is-config="true" signature="setExtent(org.testng.ITestContext)[pri:0, instance:com.QALegendBilling.testscript.NewlyAddedLoginTest@7161d8d1]" started-at="2023-09-06T16:38:43 IST" name="setExtent" finished-at="2023-09-06T16:38:44 IST" duration-ms="204" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5002be8e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setExtent -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.QALegendBilling.testscript.NewlyAddedLoginTest@7161d8d1]" started-at="2023-09-06T16:38:44 IST" name="setUP" finished-at="2023-09-06T16:38:55 IST" duration-ms="11696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="TC_010_verifyLoginUsingNewlyAddedUser()[pri:1, instance:com.QALegendBilling.testscript.NewlyAddedLoginTest@7161d8d1]" started-at="2023-09-06T16:38:55 IST" name="TC_010_verifyLoginUsingNewlyAddedUser" description="TC_010 Verify user login with newly added user" finished-at="2023-09-06T16:39:08 IST" duration-ms="12222" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <span>...</span> is not clickable at point (1473, 24). Other element would receive the click: <div class="toast toast-success" aria-live="polite" style="display: block;">...</div>
+  (Session info: chrome=116.0.5845.111)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9358e18637d6ad095801c803f6959e51, clickElement {id=3D9DC32204279E9D3531BDEBD4FE9072_element_126}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\SREELA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58748}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58748/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (9358e18637d6ad095801c803f6959e51)] -> xpath: //a[@class='dropdown-toggle']//span]
+Session ID: 9358e18637d6ad095801c803f6959e51]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span>...</span> is not clickable at point (1473, 24). Other element would receive the click: <div class="toast toast-success" aria-live="polite" style="display: block;">...</div>
+  (Session info: chrome=116.0.5845.111)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9358e18637d6ad095801c803f6959e51, clickElement {id=3D9DC32204279E9D3531BDEBD4FE9072_element_126}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\SREELA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58748}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58748/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (9358e18637d6ad095801c803f6959e51)] -> xpath: //a[@class='dropdown-toggle']//span]
+Session ID: 9358e18637d6ad095801c803f6959e51
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+at com.QALegendBilling.utilities.PageUtility.clickOnElement(PageUtility.java:12)
+at com.QALegendBilling.pages.HomePage.clickSighnoutButton(HomePage.java:67)
+at com.QALegendBilling.testscript.NewlyAddedLoginTest.TC_010_verifyLoginUsingNewlyAddedUser(NewlyAddedLoginTest.java:54)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_010_verifyLoginUsingNewlyAddedUser -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.QALegendBilling.testscript.NewlyAddedLoginTest@7161d8d1]" started-at="2023-09-06T16:39:08 IST" name="tearDown" finished-at="2023-09-06T16:39:08 IST" duration-ms="547" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_010_verifyLoginUsingNewlyAddedUser status=FAILURE method=NewlyAddedLoginTest.TC_010_verifyLoginUsingNewlyAddedUser()[pri:1, instance:com.QALegendBilling.testscript.NewlyAddedLoginTest@7161d8d1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.QALegendBilling.testscript.NewlyAddedLoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
