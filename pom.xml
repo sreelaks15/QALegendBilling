@@ -57,7 +57,7 @@
 				<configuration>
 					<testFailureIgnore>true</testFailureIgnore>
 					<suiteXmlFiles>
-						<suiteXmlFile>JenkinsTestNg.xml</suiteXmlFile>
+						<suiteXmlFile>myTestNG.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
