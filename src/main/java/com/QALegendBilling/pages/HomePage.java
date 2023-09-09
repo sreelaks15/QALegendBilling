@@ -44,6 +44,9 @@ public class HomePage extends TestHelperUtility {
 	@FindBy(xpath = _salesCommissionTab)
 	private WebElement salesCommissionTab;
 	
+	private final String _homeTab = "//a[@href='https://qalegend.com/billing/public/home']//span";
+	@FindBy(xpath = _homeTab)
+	private WebElement homeTab;
 	
 	public boolean userMenuIsDisplayed() {
 	boolean status =page.isDisplayed(userTab);
@@ -86,6 +89,10 @@ public class HomePage extends TestHelperUtility {
 	public RolePage clickRolesTab() {//Click on RolesTab
 		page.clickOnElement(rolesTab);
 		return new RolePage(driver);
+	}
+	
+	public void clickHomeButton() {
+		page.clickOnElement(homeTab);
 	}
 
 }

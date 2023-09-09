@@ -13,7 +13,7 @@ import com.QALegendBilling.pages.HomePage;
 import com.QALegendBilling.pages.LoginPage;
 import com.QALegendBilling.pages.UsersPage;
 import com.QALegendBilling.utilities.ExcelUtility;
-import com.demowebshop.utilities.RandomUtility;
+import com.QALegendBilling.utilities.RandomUtility;
 
 public class NewlyAddedLoginTest extends Base{
 	LoginPage login;
@@ -37,6 +37,7 @@ public class NewlyAddedLoginTest extends Base{
 		String salesCommissionPercentage = data1.get(8).get(1);
 
 		login = new LoginPage(driver);
+		String actTitile = login.loginPageTitle();
 		login.enterUserName(uname);
 		login.enterPassword(pwrd);
 		home = login.clickSubmit();
@@ -49,17 +50,16 @@ public class NewlyAddedLoginTest extends Base{
 		users.setValidEmail(email);
 		String actEmail = users.getValidEmail();
 		Assert.assertEquals(email, actEmail, ErrorMessages.RESET_PASSWORD_ERROR_MESSAGE);
-		
-		String actTitile = login.loginPageTitle();
+		home.clickHomeButton();
 		login = home.clickSighnoutButton();
 		String expTitle = login.loginPageTitle();
 		Assert.assertEquals(actTitile, expTitle, ErrorMessages.TITLE_FAILURE_MESSAGE);
 		
-		login.enterUserName(uname);		
-		login.enterPassword(pwrd);
-		home=login.clickSubmit();     
+		login.enterUserName(userName);		
+		login.enterPassword(password);
+		home=login.clickLogin();     
 		String actualUserName=home.getUserAccountName();
-		String expUserName=uname;
+		String expUserName=firstName +" "+ lastName;
 		Assert.assertEquals(expUserName, actualUserName,ErrorMessages.USERNAME_FAILURE_MESSAGE);
 	}
 	

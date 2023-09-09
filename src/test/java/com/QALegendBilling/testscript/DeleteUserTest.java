@@ -14,7 +14,7 @@ import com.QALegendBilling.pages.HomePage;
 import com.QALegendBilling.pages.LoginPage;
 import com.QALegendBilling.pages.UsersPage;
 import com.QALegendBilling.utilities.ExcelUtility;
-import com.demowebshop.utilities.RandomUtility;
+import com.QALegendBilling.utilities.RandomUtility;
 
 public class DeleteUserTest extends Base{
 	LoginPage login;

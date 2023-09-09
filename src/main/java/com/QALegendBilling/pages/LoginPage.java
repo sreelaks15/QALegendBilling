@@ -31,6 +31,7 @@ public class LoginPage extends TestHelperUtility {
 	private final String _forgotpassword="//a[@class='btn btn-link']";
 	@FindBy(xpath=_forgotpassword)
 	WebElement forgotpassword;
+	
 	//private final String _prfile="//span[text()='Sreelakshmi S']";
 	private final String _prfile="//a[@class='dropdown-toggle']//following-sibling::span";
 	@FindBy(xpath=_prfile)
@@ -82,6 +83,11 @@ public class LoginPage extends TestHelperUtility {
 		page.clickOnElement(loginButton);
 	}
 
+	public HomePage clickLogin() {
+		page.clickOnElement(submitbutton);
+		return new HomePage(driver);
+		
+	}
 }
 	
 

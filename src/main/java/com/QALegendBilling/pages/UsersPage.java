@@ -43,6 +43,14 @@ public class UsersPage extends TestHelperUtility {
 	@FindBy(xpath = _noRecordFoundField)
 	private WebElement noRecordFoundField;
 	
+	private final String _userAccount = "//a[@class='dropdown-toggle']//span";
+	@FindBy(xpath = _userAccount)
+	WebElement userAccount;
+	
+	private final String _signoutField = "//a[text()='Sign Out']";
+	@FindBy(xpath = _signoutField)
+	WebElement signoutField;
+	
 	public CreatePage clickOnAddButton() {
 		page.clickOnElement(addButton);
 		return new CreatePage(driver);
@@ -81,6 +89,13 @@ public class UsersPage extends TestHelperUtility {
 		page.clickOnElement(editButton);
 		return new EditUserPage(driver);
 
+	}
+	public LoginPage clickSighnoutButton() {
+		wait.waitForElementToBeVisible(driver, userAccount);
+		page.clickOnElement(userAccount);
+		wait.waitForElementToBeVisible(driver, signoutField);
+		page.clickOnElement(signoutField);
+		return new LoginPage(driver);
 	}
 
 }
