@@ -10,10 +10,17 @@
 			<class name="com.QALegendBilling.testscript.LoginTest">
 				<methods>
 					<include name="TC_001_verifyValidLogin" />
-					<exclude name="TC_002_verifyInvalidLogin" />
+					<include name="TC_002_verifyInvalidLogin" />
+					<include name="TC_003 verify if user is navigated to loginpage by clicking signout button" />
+					<include name="TC_004 verify if error message is displayed on the reset page with invalid email id" />
+					<include name="TC_005 verify role search" />
+					<include name="TC_006 verify add user details" />
+					<include name="TC_007 verify if user management tabs are displayed" />
+					<include name="TC_008 verify delete user" />
+					<include name="TC_009 verify edit user" />
+					<include name="TC_010 Verify user login with newly added user" />
 				</methods>
 			</class>
 		</classes>
 	</test> 
 </suite> 
-

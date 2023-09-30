@@ -2,6 +2,7 @@ package com.QALegendBilling.utilities;
 
 import com.github.javafaker.Faker;
 import java.util.Random;
+
 public class RandomUtility {
 	static Faker faker;
 	static String fName;
@@ -18,7 +19,7 @@ public class RandomUtility {
 		lName = faker.name().lastName();
 		return lName;
 	}
-
+	
 	public static String getRandomEmail() {
 		String alphabet = "abcdefghijklmnopqrstuvwxyz";
 		StringBuilder sb = new StringBuilder();

@@ -12,12 +12,13 @@ import com.QALegendBilling.utilities.TestHelperUtility;
 public class LoginPage extends TestHelperUtility {
 	public WebDriver driver;
 
-	public LoginPage(WebDriver driver) {
+	public LoginPage(WebDriver driver) //eg of constructor
+	{
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this); // page factory initialized using initElements//intialized in page factory
 }
 	private final String _username="//input[@id='username']";
-	@FindBy(xpath=_username)
+	@FindBy(xpath=_username) // declared here @FindBy is an annotation of testNG
 	WebElement username;
 	private final String _password="//input[@id='password']";
 	@FindBy(xpath=_password)
@@ -32,7 +33,6 @@ public class LoginPage extends TestHelperUtility {
 	@FindBy(xpath=_forgotpassword)
 	WebElement forgotpassword;
 	
-	//private final String _prfile="//span[text()='Sreelakshmi S']";
 	private final String _prfile="//a[@class='dropdown-toggle']//following-sibling::span";
 	@FindBy(xpath=_prfile)
 	WebElement prfile;
@@ -46,7 +46,8 @@ public class LoginPage extends TestHelperUtility {
 	private WebElement loginButton;
 	
 	public void enterUserName(String uname) {
-		page.enterText(username, uname);	
+	//	page.enterText(username, uname);
+		username.sendKeys(uname);
 	}
 	public void enterUserEmail(String userName)
 	{
@@ -62,7 +63,6 @@ public class LoginPage extends TestHelperUtility {
 		return new HomePage(driver);
 		
 	}
-	
 	public ResetPage clickforgot() {
 		page.clickOnElement(forgotpassword);
 		return new ResetPage(driver);

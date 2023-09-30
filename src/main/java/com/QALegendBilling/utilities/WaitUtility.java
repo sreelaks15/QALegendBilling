@@ -22,16 +22,13 @@ public class WaitUtility {
 			throw new RuntimeException(e);
 		}
 	}
-
 	public static void setImplicitWait(WebDriver driver) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICIT_WAIT));
 	}
-
 	public static void setPageLoadWait(WebDriver driver) {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(PAGE_LOAD_WAIT));
 	}
-
-	public enum LocatorType {
+public enum LocatorType {
 		Id, Name, Xpath, ClassName, CssSelector, TagName, LinkText, PartialLinkText;
 	}
 
@@ -50,17 +47,25 @@ public class WaitUtility {
 		}
 	}
 
-	public void waitForElementToBeVisible(WebDriver driver, WebElement element) {
+		public void waitForElementToBeVisible(WebDriver driver, WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
-	public void waitForElementToBeClickable(WebDriver driver, String target, Enum locatorType) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
-		if (locatorType.equals(LocatorType.Id)) {
-			wait.until(ExpectedConditions.elementToBeClickable(By.id(target)));
-		} else {
-			throw new RuntimeException("Invalid Locator");
+		public void waitForElementToBeClickable(WebDriver driver, String target, Enum locatorType) {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+			if (locatorType.equals(LocatorType.Id)) {
+				wait.until(ExpectedConditions.elementToBeClickable(By.id(target)));
+			} else {
+				throw new RuntimeException("Invalid Locator");
+			}
 		}
-	}
+		/*public void waitForElementToBeClickable(WebDriver driver, WebElement element) {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+		}*/
+		
+
+		
+		
 }

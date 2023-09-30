@@ -12,6 +12,7 @@ import com.QALegendBilling.pages.HomePage;
 import com.QALegendBilling.pages.LoginPage;
 import com.QALegendBilling.utilities.ExcelUtility;
 import com.QALegendBilling.dataprovider.DataProviders;
+import com.QALegendBilling.listeners.Retry;
 
 
 
@@ -19,7 +20,7 @@ public class LoginTest extends Base{
 	LoginPage login;
 	HomePage home;
 	
-	@Test(priority=1,description="TC_001 verify valid login",groups= {"Regression"})
+	@Test(priority=1,description="TC_001 verify valid login",groups= {"Regression"},retryAnalyzer=Retry.class)
 	public void TC_001_verifyValidLogin() {
 		List<ArrayList<String>>data=ExcelUtility.excelDataReader("LoginPage");
 		String uname=data.get(0).get(1);
@@ -30,6 +31,7 @@ public class LoginTest extends Base{
 		login.enterPassword(pwrd);
 		home=login.clickSubmit();     
 		String actualUserName=home.getUserAccountName();
+		//Assert.assertTrue(false);//for retry
 		Assert.assertEquals(expUserName, actualUserName,ErrorMessages.USERNAME_FAILURE_MESSAGE);
 		}
 	
@@ -45,7 +47,6 @@ public class LoginTest extends Base{
 		login.clickOnSubmitButton();
 		String actErrorMsg = login.getErrorMessage();
 		Assert.assertEquals(exp_ErrorMsg, actErrorMsg,ErrorMessages.INVALID_LOGIN);
-		
 	}
 	
 }

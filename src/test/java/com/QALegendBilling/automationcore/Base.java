@@ -22,7 +22,7 @@ import com.QALegendBilling.utilities.TestHelperUtility;
 
 public class Base extends TestHelperUtility {
 	public WebDriver driver;
-	public Properties prop;
+	public static Properties prop;
 	public FileInputStream fs;
 
 	public Base() {
@@ -33,31 +33,23 @@ public class Base extends TestHelperUtility {
 			e.printStackTrace();
 		}
 		try {
-			prop.load(fs);
+			prop.load(fs); 
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-	//to run with configuration file
-	/*  @BeforeMethod(alwaysRun = true)
-	 
-	  @Parameters({"browser"})
-	  public void setUP(String browserName){ 
-	 // String browser= prop.getProperty("browser"); 
-	  String url= prop.getProperty("url");
-	  driver = DriverFactory.testInitialization(browserName); 
-	  driver.get(url); }
-	 */
-
-	//to run individual test cases
 	@BeforeMethod(alwaysRun = true)
-	public void setUP() {
-		String browser = prop.getProperty("browser");
+	@Parameters({ "browser" })
+	public void setUP(String browserName) {
+		//String browser= prop.getProperty("browser");
 		String url = prop.getProperty("url");
-		driver = DriverFactory.testInitialization(browser);
+		driver = DriverFactory.testInitialization(browserName);
 		driver.get(url);
 	}
-
+	public static String getDriverPath() {
+		String driverPath = System.getProperty("user.dir")+prop.getProperty("driverPath");
+		return driverPath;
+	}
 	@AfterMethod(alwaysRun = true)
 	public void tearDown(ITestResult result) throws IOException {
 		if (result.getStatus() == ITestResult.FAILURE) {
@@ -67,10 +59,8 @@ public class Base extends TestHelperUtility {
 		}
 		driver.quit();
 	}
-
 	@BeforeSuite
 	public void setExtent(final ITestContext testContext) {
 		ExtentManager.createInstance().createTest(testContext.getName(), "TEST FAILED");
 	}
-	
 }
